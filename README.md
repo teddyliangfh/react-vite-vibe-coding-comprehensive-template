@@ -2,18 +2,6 @@
 
 A modern, production-ready React template built with Vite and TypeScript. This template provides a solid foundation for building scalable React applications.
 
-[![Template](https://img.shields.io/badge/Template-React%20%2B%20Vite%20%2B%20TypeScript-blue?style=for-the-badge&logo=react)](https://github.com/yourusername/react-vite-vibe-coding-base-template/generate)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-## 🚀 Quick Start
-
-Click the **"Use this template"** button above to create a new repository from this template, or clone it directly:
-
-```bash
-git clone https://github.com/yourusername/react-vite-vibe-coding-base-template.git
-cd react-vite-vibe-coding-base-template
-```
-
 ## ✨ Features
 
 - ⚡ **Vite** - Lightning fast build tool and dev server
@@ -25,36 +13,33 @@ cd react-vite-vibe-coding-base-template
 - ♿ **Accessibility** - Built with accessibility in mind
 - 🔧 **Hot Module Replacement** - Instant updates during development
 
-## 📋 Prerequisites
-
-- Node.js >= 18.0.0
-- npm >= 8.0.0
-
-## 🎯 Getting Started
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm dev
 ```
+
+## 📋 Prerequisites
+
+- Node.js >= 18.0.0
+- pnpm >= 8.0.0
 
 ## 🛠️ Available Scripts
 
 ```bash
 # Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
+pnpm dev             # Start development server
+pnpm build           # Build for production
+pnpm preview         # Preview production build
 
 # Code Quality
-npm run lint         # Run ESLint
-npm run lint:fix     # Fix ESLint issues
-npm run type-check   # Run TypeScript type checking
-
-# Utilities
-npm run clean        # Clean build artifacts and node_modules
+pnpm lint            # Run ESLint
+pnpm lint:fix        # Fix ESLint issues
+pnpm type-check      # Run TypeScript type checking
 ```
 
 ## 📁 Project Structure
@@ -81,7 +66,6 @@ This template follows React best practices with:
 - **TypeScript Interfaces** - Full type safety
 - **CSS Modules** - Scoped styling
 - **Single Responsibility** - Each component has one clear purpose
-- **Accessibility** - Built-in ARIA support
 
 ### Example Component Structure
 
@@ -104,17 +88,15 @@ export function MyComponent({ title, className = '' }: MyComponentProps) {
 ## 🔧 Configuration Files
 
 - `vite.config.ts` - Vite configuration
-- `tsconfig.json` - TypeScript configuration
+- `tsconfig.json` - TypeScript configuration (with project references)
 - `eslint.config.js` - ESLint configuration
-- `.gitignore` - Git ignore rules
-- `.npmrc` - npm configuration
 
 ## 🚀 Deployment
 
 ### Build for Production
 
 ```bash
-npm run build
+pnpm build
 ```
 
 The build output will be in the `dist/` directory, ready for deployment to any static hosting service.
@@ -129,68 +111,15 @@ The build output will be in the `dist/` directory, ready for deployment to any s
 ## 📦 Adding Dependencies
 
 ```bash
-npm install package-name
-npm install -D package-name  # dev dependency
+pnpm add package-name
+pnpm add -D package-name     # dev dependency
 ```
 
 ## 🔍 Development Tips
 
-### TypeScript Best Practices
-
 - Use interfaces for component props
-- Avoid `any` type - use proper typing
-- Enable strict mode in `tsconfig.json`
-- Use type guards for runtime type checking
-
-### React Best Practices
-
-- Use functional components with hooks
 - Keep components small and focused
-- Use composition over inheritance
-- Implement proper error boundaries
-- Use React.memo for performance optimization
-
-### CSS Best Practices
-
 - Use CSS modules for component-specific styles
-- Follow BEM methodology for class naming
-- Implement responsive design with mobile-first approach
-- Use CSS custom properties for theming
+- Enable strict mode in TypeScript configuration
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Vite](https://vitejs.dev/) - Next generation frontend tooling
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
-
----
-
-**Happy Coding! 🎉**
-
----
-
-## 📝 Template Usage
-
-This is a GitHub template repository. To use it:
-
-1. Click the **"Use this template"** button at the top of this page
-2. Choose your repository name and settings
-3. Clone your new repository
-4. Follow the setup instructions above
-
-**Note**: When using this template, remember to:
-- Update the repository URL in this README
-- Customize the project name and description
-- Add your own features and components
+Happy Coding! 🎉
