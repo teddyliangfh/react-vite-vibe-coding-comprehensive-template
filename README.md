@@ -7,11 +7,11 @@ A modern, production-ready React template built with Vite and TypeScript. This t
 - ⚡ **Vite** - Lightning fast build tool and dev server
 - ⚛️ **React 19** - Latest React with modern features
 - 🔷 **TypeScript** - Full type safety and better developer experience
-- 🎨 **Modern CSS** - Clean, responsive design with CSS modules support
+- 🎨 **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- 🎯 **Responsive Design** - Responsive design with Tailwind breakpoints
 - 🛠️ **ESLint + Prettier** - Advanced code quality and formatting with antfu/eslint-config
 - 🔄 **Auto-formatting** - Format on save and pre-commit hooks
 - 🐕 **Husky** - Git hooks for consistent code quality
-- 📱 **Responsive Design** - Mobile-first approach
 - ♿ **Accessibility** - Built with accessibility in mind
 - 🔧 **Hot Module Replacement** - Instant updates during development
 
@@ -68,7 +68,7 @@ This template follows React best practices with:
 
 - **Functional Components** - Modern React with hooks
 - **TypeScript Interfaces** - Full type safety
-- **CSS Modules** - Scoped styling
+- **Tailwind CSS** - Utility-first styling with responsive design
 - **Single Responsibility** - Each component has one clear purpose
 
 ### Example Component Structure
@@ -82,8 +82,9 @@ interface MyComponentProps {
 
 export function MyComponent({ title, className = '' }: MyComponentProps) {
   return (
-    <div className={`my-component ${className}`.trim()}>
-      <h2>{title}</h2>
+    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`.trim()}>
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">{title}</h2>
+      <p className="text-gray-600">This component uses Tailwind CSS utilities</p>
     </div>
   )
 }
@@ -93,9 +94,43 @@ export function MyComponent({ title, className = '' }: MyComponentProps) {
 
 - `vite.config.ts` - Vite configuration
 - `tsconfig.json` - TypeScript configuration (with project references)
+- `tailwind.config.js` - Tailwind CSS configuration
+- `postcss.config.js` - PostCSS configuration for Tailwind
 - `eslint.config.js` - ESLint configuration with antfu/eslint-config
 - `.vscode/settings.json` - VS Code settings for auto-formatting
 - `.husky/pre-commit` - Git hooks for pre-commit formatting
+
+## 🎨 Tailwind CSS Setup
+
+This template includes Tailwind CSS for rapid UI development:
+
+### Features
+- **Utility-First**: Rapidly build custom designs with utility classes
+- **Responsive Design**: Built-in responsive breakpoints (sm, md, lg, xl, 2xl)
+- **Dark Mode Ready**: Easy dark mode implementation
+- **Customizable**: Extend with your own design tokens
+- **Purge CSS**: Automatically remove unused styles in production
+
+### Usage Examples
+
+```jsx
+// Responsive design with Tailwind
+<div className="w-full md:w-1/2 lg:w-1/3 p-4">
+  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+      Responsive Card
+    </h3>
+    <p className="text-gray-600 dark:text-gray-300 mt-2">
+      This card adapts to different screen sizes
+    </p>
+  </div>
+</div>
+```
+
+### Configuration
+- `tailwind.config.js` - Customize colors, spacing, and other design tokens
+- `postcss.config.js` - PostCSS configuration for Tailwind processing
+- `src/index.css` - Global Tailwind directives and custom styles
 
 ## 🛠️ Code Quality & Formatting
 
@@ -161,7 +196,8 @@ pnpm add -D package-name     # dev dependency
 
 - Use interfaces for component props
 - Keep components small and focused
-- Use CSS modules for component-specific styles
+- Use Tailwind CSS utilities for rapid styling
+- Leverage Tailwind's responsive prefixes (sm:, md:, lg:, xl:)
 - Enable strict mode in TypeScript configuration
 - Code will be automatically formatted on save
 - Git commits will automatically format staged files
@@ -172,5 +208,7 @@ pnpm add -D package-name     # dev dependency
 - [ESLint Configuration Guide](./ESLINT_SETUP.md) - Detailed setup documentation
 - [antfu/eslint-config](https://github.com/antfu/eslint-config) - ESLint configuration documentation
 - [Husky Documentation](https://typicode.github.io/husky/) - Git hooks setup guide
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Complete Tailwind CSS guide
+- [Tailwind CSS Cheat Sheet](https://nerdcave.com/tailwind-cheat-sheet) - Quick reference for utilities
 
 Happy Coding! 🎉
