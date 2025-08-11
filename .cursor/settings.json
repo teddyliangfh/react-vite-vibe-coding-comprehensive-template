@@ -1,0 +1,27 @@
+{
+  "files": {
+    "exclude": {
+      "**/node_modules/**": true,
+      "**/dist/**": true,
+      "**/dist-ssr/**": true,
+      "**/build/**": true,
+      "**/.git/**": true,
+      "**/.vscode/**": true,
+      "**/.idea/**": true,
+      "**/coverage/**": true,
+      "**/.nyc_output/**": true,
+      "**/logs/**": true,
+      "**/*.log": true,
+      "**/pnpm-lock.yaml": true,
+      "**/yarn.lock": true,
+      "**/package-lock.json": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/*.local": true,
+      "**/.env.local": true,
+      "**/.env.*.local": true,
+      "**/public/vite.svg": true,
+      "**/src/assets/react.svg": true
+    }
+  }
+}

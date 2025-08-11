@@ -108,8 +108,8 @@ Thumbs.db
 *.sln
 *.sw?
 
-# Cursor
-.cursor/
+# Cursor - Allow all project configurations, only exclude personal settings
+.cursor/personal/
 
 # TypeScript
 *.tsbuildinfo

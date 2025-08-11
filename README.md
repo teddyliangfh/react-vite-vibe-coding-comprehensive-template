@@ -203,6 +203,43 @@ pnpm add -D package-name     # dev dependency
 - Git commits will automatically format staged files
 - Use `pnpm lint` to check code quality before pushing
 
+## 🤖 Cursor Configuration
+
+This project includes comprehensive Cursor IDE configuration for enhanced development experience:
+
+### 📁 Configuration Structure
+```
+.cursor/
+├── mcp.json                  # MCP server configuration
+├── settings.json             # Project-wide settings
+├── rules/                    # AI coding guidelines
+└── personal/                 # Personal settings (git-ignored)
+```
+
+### 🔧 Shared Configuration
+- **MCP Server**: Context7 integration for enhanced AI assistance
+- **Project Settings**: Optimized file exclusions and editor preferences
+- **AI Rules**: Comprehensive coding guidelines for React, TypeScript, and general best practices
+
+### 🎯 Features
+- **Enhanced AI Assistance**: Context-aware code suggestions
+- **Consistent Code Style**: Automated formatting and linting rules
+- **Team Collaboration**: Shared configuration for consistent development experience
+- **Personal Customization**: Individual preferences in `personal/` directory
+
+### 📋 Available Rules
+- **Global Rules**: General coding standards and best practices
+- **React Rules**: React-specific guidelines and patterns
+- **TypeScript Rules**: TypeScript best practices and type safety
+
+### 🚀 Getting Started
+1. **Automatic Setup**: All configurations are applied when you clone the repository
+2. **Personal Settings**: Copy `.cursor/personal/personal-settings.example.json` to customize
+3. **Documentation**: See `.cursor/README.md` for detailed configuration guide
+
+### Usage
+All configurations are automatically used by Cursor. No additional setup required.
+
 ## 📚 Additional Resources
 
 - [ESLint Configuration Guide](./ESLINT_SETUP.md) - Detailed setup documentation
