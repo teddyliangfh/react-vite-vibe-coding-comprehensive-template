@@ -118,8 +118,16 @@ Thumbs.db
 .vite/
 
 # Testing
+html/
 /coverage
+*.lcov
+*.html
 /.nyc_output
+
+# Test artifacts
+test-results/
+playwright-report/
+
 
 # Production
 /build

@@ -11,6 +11,7 @@ A modern, production-ready React template with Vite, TypeScript, and Tailwind CS
 - 🛠️ **ESLint + Prettier** - Code quality with antfu/eslint-config
 - 🔄 **Auto-formatting** - Format on save and pre-commit hooks
 - 🐕 **Husky** - Git hooks for consistent code quality
+- 🧪 **Vitest** - Fast unit testing with React Testing Library
 - 🖥️ **AI-Powered Development** - Cursor IDE with vibe coding workflow
 
 ## 🚀 Quick Start
@@ -40,22 +41,35 @@ pnpm format          # Format all files
 pnpm type-check      # TypeScript type checking
 ```
 
+## 🧪 Testing
+
+This project uses **Vitest** for fast, modern testing with React Testing Library. Tests run in watch mode by default and include comprehensive coverage reporting.
+
+```bash
+pnpm test            # Run tests in watch mode
+pnpm test:ui         # Interactive UI with coverage
+pnpm test:run        # Run tests once
+pnpm test:coverage   # Generate coverage report
+```
+
+**📖 [Full Testing Guide →](./TESTING.md)**
+
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/          # Reusable UI components
 ├── assets/             # Static assets
+├── test/               # Test setup and utilities
 ├── App.tsx            # Main application component
 ├── main.tsx           # Application entry point
 └── index.css          # Global styles
 ```
 
-
-
 ## 🔧 Configuration
 
-- `vite.config.ts` - Vite configuration
+- `vite.config.ts` - Vite configuration with Vitest
+- `vitest.config.ts` - Dedicated Vitest configuration
 - `tsconfig.json` - TypeScript configuration
 - `tailwind.config.js` - Tailwind CSS configuration
 - `eslint.config.js` - ESLint configuration
@@ -92,8 +106,10 @@ pnpm add -D package-name     # dev dependency
 
 ## 📚 Resources
 
+- [Testing Guide](./TESTING.md)
 - [ESLint Setup](./ESLINT_SETUP.md)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
 - [Vite Docs](https://vitejs.dev/)
+- [Vitest Docs](https://vitest.dev/)
 
 Happy Coding! 🎉
