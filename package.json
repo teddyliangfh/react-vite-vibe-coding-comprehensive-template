@@ -21,9 +21,7 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:coverage:ui": "vitest run --coverage --ui",
     "test:watch": "vitest --watch",
-    "test:html": "vitest run --reporter=html",
     "prepare": "husky"
   },
   "dependencies": {

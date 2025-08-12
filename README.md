@@ -4,6 +4,7 @@ A modern, production-ready React template with Vite, TypeScript, and Tailwind CS
 
 ## ✨ Features
 
+- 🖥️ **AI-Powered Development** - Cursor IDE with vibe coding workflow
 - ⚡ **Vite** - Lightning fast build tool
 - ⚛️ **React 19** - Latest React with modern features
 - 🔷 **TypeScript** - Full type safety
@@ -12,7 +13,6 @@ A modern, production-ready React template with Vite, TypeScript, and Tailwind CS
 - 🔄 **Auto-formatting** - Format on save and pre-commit hooks
 - 🐕 **Husky** - Git hooks for consistent code quality
 - 🧪 **Vitest** - Fast unit testing with React Testing Library
-- 🖥️ **AI-Powered Development** - Cursor IDE with vibe coding workflow
 
 ## 🚀 Quick Start
 
@@ -98,11 +98,23 @@ pnpm add -D package-name     # dev dependency
 - **Consistent Code Style** - Automated formatting and linting rules
 - **Team Collaboration** - Shared configuration for consistent development experience
 
+### AI Development Rules & Standards
+- **React Best Practices** - Comprehensive guide covering code organization, performance, security, testing, and common pitfalls
+- **TypeScript Standards** - Enforces best practices for TypeScript development including coding standards, performance considerations, and common pitfalls
+- **Testing Excellence** - Comprehensive best practices for Vitest covering code organization, testing strategies, performance, and security
+- **Code Quality Guidelines** - Clean code principles, meaningful naming, single responsibility, DRY principles, and continuous refactoring
+
+### MCP Server Integration
+- **Context7** - AI-powered documentation and library research tool for comprehensive development assistance
+- **Playwright Browser** - Automated browser testing and web automation capabilities
+- **Enhanced AI Context** - Access to up-to-date library documentation and best practices
+
 ### AI Features
 - **Smart Code Generation** - AI-assisted component and function creation
-- **Context-Aware Suggestions** - Intelligent recommendations based on project structure
+- **Context-Aware Suggestions** - Intelligent recommendations based on project structure and rules
 - **Automated Refactoring** - AI-powered code optimization and restructuring
 - **Real-time Assistance** - Instant help with coding challenges and best practices
+- **Rule-Based Development** - AI follows established coding standards and best practices
 
 ## 📚 Resources
 
