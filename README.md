@@ -20,9 +20,11 @@ A modern, production-ready React template with Vite, TypeScript, and Tailwind CS
 # Install dependencies
 pnpm install
 
-# Start development server
+# Start development server (runs on http://localhost:4000)
 pnpm dev
 ```
+
+> **Note:** The development server is configured to run on port 4000. You can access your app at `http://localhost:4000`
 
 ## 📋 Prerequisites
 
@@ -32,7 +34,7 @@ pnpm dev
 ## 🛠️ Scripts
 
 ```bash
-pnpm dev             # Start development server
+pnpm dev             # Start development server (localhost:4000)
 pnpm build           # Build for production
 pnpm preview         # Preview production build
 pnpm lint            # Run ESLint
@@ -68,7 +70,7 @@ src/
 
 ## 🔧 Configuration
 
-- `vite.config.ts` - Vite configuration with Vitest
+- `vite.config.ts` - Vite configuration with Vitest (dev server on port 4000)
 - `vitest.config.ts` - Dedicated Vitest configuration
 - `tsconfig.json` - TypeScript configuration
 - `tailwind.config.js` - Tailwind CSS configuration
