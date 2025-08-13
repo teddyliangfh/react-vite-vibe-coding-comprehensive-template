@@ -1,6 +1,6 @@
 # React Vite TypeScript Template
 
-A modern, production-ready React template with Vite, TypeScript, and Tailwind CSS.
+A modern, production-ready React template with Vite, TypeScript, Tailwind CSS, and React Router v7.
 
 ## ✨ Features
 
@@ -13,6 +13,7 @@ A modern, production-ready React template with Vite, TypeScript, and Tailwind CS
 - 🔄 **Auto-formatting** - Format on save and pre-commit hooks
 - 🐕 **Husky** - Git hooks for consistent code quality
 - 🧪 **Vitest** - Fast unit testing with React Testing Library
+- 🛣️ **React Router v7** - Modern routing with data routers and nested layouts
 
 ## 🚀 Quick Start
 
@@ -54,14 +55,50 @@ pnpm test:run        # Run tests once
 pnpm test:coverage   # Generate coverage report
 ```
 
+
+
 **📖 [Full Testing Guide →](./TESTING.md)**
+
+## 🛣️ React Router v7
+
+Modern routing with data routers and nested layouts:
+
+```typescript
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'list', element: <List /> },
+      { path: 'list/:id', element: <ListItemDetail /> },
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+])
+```
+
+**Pages**: Home, List, Detail (`/list/:id`), 404  
+**Components**: ResourceGrid, ResourceDetail, Breadcrumb
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/          # Reusable UI components
-├── assets/             # Static assets
+│   ├── Breadcrumb/     # Navigation breadcrumbs
+│   ├── ResourceGrid/   # Resource grid layout
+│   ├── ResourceDetail/ # Resource detail view
+│   └── Navigation/     # Main navigation
+├── pages/              # Page components
+│   ├── Home.tsx        # Landing page
+│   ├── List.tsx        # Resource list page
+│   ├── ListItemDetail.tsx # Resource detail page
+│   └── NotFound.tsx    # 404 error page
+├── types/              # TypeScript type definitions
+│   └── resource.ts     # Resource data types
+├── data/               # Data layer
+│   └── mockResources.ts # Mock data and utilities
 ├── test/               # Test setup and utilities
 ├── App.tsx            # Main application component
 ├── main.tsx           # Application entry point
@@ -122,8 +159,26 @@ pnpm add -D package-name     # dev dependency
 
 - [Testing Guide](./TESTING.md)
 - [ESLint Setup](./ESLINT_SETUP.md)
+- [React Router v7 Docs](https://reactrouter.com/)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
 - [Vite Docs](https://vitejs.dev/)
 - [Vitest Docs](https://vitest.dev/)
+
+## 🎯 Quick Examples
+
+```typescript
+// Add new route
+{ path: 'about', element: <About /> }
+
+// Access route params
+const { id } = useParams<{ id: string }>()
+
+// Test with MemoryRouter
+<MemoryRouter initialEntries={['/list/1']}>
+  <Routes>
+    <Route path="/list/:id" element={<ListItemDetail />} />
+  </Routes>
+</MemoryRouter>
+```
 
 Happy Coding! 🎉

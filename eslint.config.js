@@ -3,8 +3,7 @@ import antfu from '@antfu/eslint-config'
 export default antfu({
   // Ignored files
   ignores: [
-    'README.md',
-    'ESLINT_SETUP.md',
+    '**/*.md', // Ignore all markdown files
     'dist/',
     'node_modules/',
     '*.min.js',

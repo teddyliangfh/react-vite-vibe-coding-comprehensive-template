@@ -27,7 +27,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^7.8.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "5.2.0",

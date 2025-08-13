@@ -1,30 +1,16 @@
-import React, { ReactElement } from 'react'
-import { render, RenderOptions } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
+import type { RenderOptions } from '@testing-library/react'
+import type { ReactElement } from 'react'
+import { render } from '@testing-library/react'
+import { AllTheProviders } from './AllTheProviders'
 
 // Custom render function that includes providers
 interface CustomRenderOptions extends Omit<RenderOptions, 'wrapper'> {
   withRouter?: boolean
 }
 
-const AllTheProviders = ({ children, withRouter = false }: { children: React.ReactNode; withRouter?: boolean }) => {
-  if (withRouter) {
-    return (
-      <BrowserRouter>
-        {children}
-      </BrowserRouter>
-    )
-  }
-  
-  return <>{children}</>
-}
-
-const customRender = (
-  ui: ReactElement,
-  options: CustomRenderOptions = {}
-) => {
+function customRender(ui: ReactElement, options: CustomRenderOptions = {}) {
   const { withRouter = false, ...renderOptions } = options
-  
+
   return render(ui, {
     wrapper: ({ children }) => (
       <AllTheProviders withRouter={withRouter}>
@@ -36,6 +22,7 @@ const customRender = (
 }
 
 // Re-export everything
+// eslint-disable-next-line react-refresh/only-export-components
 export * from '@testing-library/react'
 
 // Override render method

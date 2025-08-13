@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 4000,
-    host: true, 
-    open: true 
+    host: true,
+    open: true,
   },
   test: {
     globals: true,
