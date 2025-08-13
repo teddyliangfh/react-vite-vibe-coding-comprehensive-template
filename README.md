@@ -114,13 +114,6 @@ src/
 - `eslint.config.js` - ESLint configuration
 - `.husky/pre-commit` - Git hooks
 
-## 🚀 Deployment
-
-```bash
-pnpm build
-```
-
-Deploy the `dist/` directory to any static hosting service.
 
 ## 📦 Add Dependencies
 
